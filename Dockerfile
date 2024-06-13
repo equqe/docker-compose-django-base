@@ -41,5 +41,4 @@ ENV SERVICE_PORT=8000
 # Run service
 CMD python manage.py migrate && gunicorn --workers=1 --bind $SERVICE_HOST:$SERVICE_PORT devops.wsgi
 
-# Copying wait-for-it.sh inside the container
 COPY wait-for-it.sh /usr/local/bin/wait-for-it.sh
